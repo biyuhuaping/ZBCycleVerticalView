@@ -1,7 +1,7 @@
 # ZBCycleVerticalView
 上下滚动的跑马灯：类似与淘宝、京东等消息、广告滚动效果
 
-##纵向轮播的视图 可自定义多个属性 控制动画开启关闭
+## 纵向轮播的视图 可自定义多个属性 控制动画开启关闭
 ![Jan-22-2019 17-08-35.gif](https://upload-images.jianshu.io/upload_images/5132421-2ae4b63674b02cc4.gif?imageMogr2/auto-orient/strip)
 
 
