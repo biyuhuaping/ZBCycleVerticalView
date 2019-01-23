@@ -22,12 +22,12 @@ typedef void(^ClickBlock)(NSInteger index);
 @property (strong, nonatomic) NSArray *dataArray;  // 数据源
 @property (copy, nonatomic) ClickBlock block;
 
-- (void)configureShowTime:(double)showTime
-            animationTime:(double)animationTime
-                direction:(ZBCycleVerticalViewScrollDirection)direction
-          backgroundColor:(UIColor *)backgroundColor
-                textColor:(UIColor *)textColor font:(UIFont *)font
-            textAlignment:(NSTextAlignment)textAlignment;
+// 开启动画（默认是开启的）
+- (void)startAnimation;
+
+// 关闭动画
+- (void)stopAnimation;
+
 @end
 
 NS_ASSUME_NONNULL_END

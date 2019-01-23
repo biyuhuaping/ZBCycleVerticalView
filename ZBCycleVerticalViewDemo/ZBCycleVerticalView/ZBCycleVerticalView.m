@@ -9,21 +9,18 @@
 #import "ZBCycleVerticalView.h"
 #import "ZBCycleView.h"
 
-#define kScreenWidth     CGRectGetWidth([UIScreen mainScreen].bounds)
-#define kScreenHeight    CGRectGetHeight([UIScreen mainScreen].bounds)
-
 @interface ZBCycleVerticalView ()
 {
-    CGRect          _topRect;
-    CGRect          _middleRect;
-    CGRect          _btmRect;
-    NSInteger       _indexNow;
+    CGRect          _topRect;   //上View
+    CGRect          _middleRect;//中View
+    CGRect          _btmRect;   //下View
     
-    double          _showTime;
-    double          _animationTime;
+    double          _showTime;  //timer循环时长
+    double          _animationTime;//动画时长
     
-    UIButton        *_button;
-    NSTimer         *_timer;
+    UIButton        *_button;   //按钮
+    NSTimer         *_timer;    //计时器
+    NSInteger       _indexNow;  //计数器
 }
 
 @property (strong, nonatomic) ZBCycleView *view1;
@@ -84,18 +81,6 @@
     [self addSubview:_button];
     
     self.clipsToBounds = YES;
-}
-
-- (void)configureShowTime:(double)showTime
-            animationTime:(double)animationTime
-                direction:(ZBCycleVerticalViewScrollDirection)direction
-          backgroundColor:(UIColor *)backgroundColor
-                textColor:(UIColor *)textColor font:(UIFont *)font
-            textAlignment:(NSTextAlignment)textAlignment{
-    _showTime = showTime;
-    _animationTime = animationTime;
-    _direction = direction;
-    self.view1.backgroundColor = self.view2.backgroundColor = backgroundColor;
 }
 
 // 执行动画
